@@ -29,3 +29,5 @@ blob-report/
 .idea/
 .DS_Store
 Thumbs.db
+
+chrome-proxy-list.txt

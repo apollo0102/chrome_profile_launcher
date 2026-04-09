@@ -1,0 +1,28 @@
+Apply this pattern to your own Playwright test file by replacing the placeholder path and selector.
+
+```diff
+--- a/tests/your-test.spec.js
++++ b/tests/your-test.spec.js
+@@
+-const { test, expect } = require("@playwright/test");
++const { test, expect } = require("@playwright/test");
++const {
++  clickAndDetectNavigation,
++} = require("../Bot/playwright-click-navigation.helper");
+@@
+ test("navigates after clicking continue", async ({ page }) => {
+   await page.goto("https://your-app.example/");
+
+-  await page.getByRole("button", { name: /continue/i }).click();
++  const result = await clickAndDetectNavigation(
++    page,
++    page.getByRole("button", { name: /continue/i }),
++    { expectedUrl: /\/dashboard|\/welcome/, timeout: 15000 }
++  );
++
++  expect(result.type).not.toBe("none");
++  expect(result.matchedExpected).toBe(true);
+ });
+```
+
+If your app reloads the same URL or opens a modal instead of navigating, assert the new UI state instead of `result.type`.

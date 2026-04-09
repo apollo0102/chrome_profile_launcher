@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Playwright Navigation Demo</title>
+  </head>
+  <body>
+    <main>
+      <h1>Navigation Demo</h1>
+      <p>This page is only for local Playwright helper testing.</p>
+      <a id="same-tab-link" href="./next.html">Go To Next Page</a>
+      <a id="popup-link" href="./next.html?mode=popup" target="_blank" rel="noreferrer">Open Next Page In Popup</a>
+      <button
+        id="inline-action"
+        type="button"
+        onclick="document.getElementById('inline-status').textContent = 'Inline action ran';"
+      >
+        Run Inline Action
+      </button>
+      <div id="inline-status">Idle</div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+DisplayName,UserPrincipalName,Alias,Password,UsageLocation,SkuPartNumber,SkuId,ForceChangePasswordNextSignIn,DisabledPlanIds
+Jane Doe,jane.doe@contoso.onmicrosoft.com,,,,ENTERPRISEPACK,,true,
+John Smith,john.smith@contoso.onmicrosoft.com,john.smith,,US,,,false,"f20fedf3-f3c3-43c3-826c-c5dfd202147e;5dbe027f-2339-4123-9542-606e4d348a72"
